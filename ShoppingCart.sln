@@ -3,9 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0497609-ED71-4C28-BC11-722DDF8D58B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{28FDA3F1-3D8E-4926-A21A-C18310834719}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{693886CD-BC96-4159-BF50-85114A010EE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{ECF2FAEF-6DEC-41CD-91EB-8C6B26FDF19D}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28FDA3F1-3D8E-4926-A21A-C18310834719} = {F0497609-ED71-4C28-BC11-722DDF8D58B1}
+		{693886CD-BC96-4159-BF50-85114A010EE2} = {28FDA3F1-3D8E-4926-A21A-C18310834719}
+		{ECF2FAEF-6DEC-41CD-91EB-8C6B26FDF19D} = {28FDA3F1-3D8E-4926-A21A-C18310834719}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6914FADC-7C54-48A8-83BC-1B2B2A42E2F6}
