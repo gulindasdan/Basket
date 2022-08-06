@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace ProductService.API.Middleware;
+namespace BasketService.API.Middleware;
 
 public class ExceptionHandlingMiddleware
 {
