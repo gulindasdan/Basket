@@ -29,7 +29,10 @@ namespace BasketService.Infrastructure.ExternalServices.Product
 
             var responseAsString = await responseMessage.Content.ReadAsStringAsync(cancellationToken);
 
-            return JsonSerializer.Deserialize<ProductServiceResponse>(responseAsString);
+            return JsonSerializer.Deserialize<ProductServiceResponse>(responseAsString, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
         }
     }
 }

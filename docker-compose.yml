@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+
+  nosqldata:
+    image: mongo
+    ports:
+        - 27017:27017
+
+  basketdata:
+    image: redis
+    ports:
+        - 6379:6379 
+
+  basket-api:
+    image: ${REGISTRY:-shoppingcart}/basket.api:${PLATFORM:-linux}-${TAG:-latest}
+    ports:
+        - 5005:5005 
+    build:
+      context: .
+      dockerfile: Services/Basket/BasketService.API/Dockerfile
+    depends_on:
+      - basketdata
+      - product-api
+
+  product-api:
+    image: ${REGISTRY:-shoppingcart}/product.api:${PLATFORM:-linux}-${TAG:-latest}
+    ports:
+        - 5000:5000 
+    build:
+      context: .
+      dockerfile: Services/Product/ProductService.API/Dockerfile
+    depends_on:
+      - nosqldata

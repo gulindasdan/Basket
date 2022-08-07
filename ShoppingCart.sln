@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0497609-ED71-4C28-BC11-722DDF8D58B1}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{28FDA3F1-3D8E-4926-A21A-C18310834719}"
 EndProject
@@ -19,13 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService.Infrastructu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService.Application", "src\Services\Product\ProductService.Application\ProductService.Application.csproj", "{1EEC1192-FC54-4EE8-8D01-A87E8C676B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Domain", "src\Services\Basket\BasketService.Domain\BasketService.Domain.csproj", "{DEA107E9-1580-4750-B890-91A3DE79A863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Domain", "src\Services\Basket\BasketService.Domain\BasketService.Domain.csproj", "{DEA107E9-1580-4750-B890-91A3DE79A863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Application", "src\Services\Basket\BasketService.Application\BasketService.Application.csproj", "{E6C38E5E-EE31-49A8-9031-BD1CA96C152E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Application", "src\Services\Basket\BasketService.Application\BasketService.Application.csproj", "{E6C38E5E-EE31-49A8-9031-BD1CA96C152E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.API", "src\Services\Basket\BasketService.API\BasketService.API.csproj", "{046FA59C-184E-411D-911A-B11D5C5A1E7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.API", "src\Services\Basket\BasketService.API\BasketService.API.csproj", "{046FA59C-184E-411D-911A-B11D5C5A1E7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Infrastructure", "src\Services\Basket\BasketService.Infrastructure\BasketService.Infrastructure.csproj", "{86CD437B-5117-4871-9AB3-89EEE9A6E939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Infrastructure", "src\Services\Basket\BasketService.Infrastructure\BasketService.Infrastructure.csproj", "{86CD437B-5117-4871-9AB3-89EEE9A6E939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

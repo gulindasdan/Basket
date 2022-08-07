@@ -75,7 +75,7 @@ public class AddItemToBasketCommandHandler : IRequestHandler<AddItemToBasketComm
 
     private static void CheckStock(int stock, int quantity)
     {
-        if (stock <= quantity)
+        if (stock < quantity)
             throw new InvalidOperationException("The product is out of stock.");
     }
 }

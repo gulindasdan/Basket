@@ -6,7 +6,7 @@ using ProductService.Application.Queries.Product;
 
 namespace ProductService.API.Controllers
 {
-    [Route("api/products")]
+    [Route("api/v1/products")]
     [ApiController]
     public class ProductController : ControllerBase
     {

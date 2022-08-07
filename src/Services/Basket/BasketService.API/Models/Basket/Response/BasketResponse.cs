@@ -2,6 +2,6 @@
 
 public record BasketResponse
 {
-    public string BasketId { get; init; }
+    public decimal TotalPrice { get; init; }
     public List<BasketItemResponse> Items { get; init; } = new List<BasketItemResponse>();
 }
