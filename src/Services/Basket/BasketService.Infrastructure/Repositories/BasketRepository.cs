@@ -26,14 +26,12 @@ namespace BasketService.Infrastructure.Repositories
 
         public async Task<Basket> UpdateBasket(Basket basket, CancellationToken cancellationToken)
         {
-            await _redisCache.SetStringAsync(basket.BasketId, JsonSerializer.Serialize(basket), cancellationToken);
-            
-            return await GetBasket(basket.BasketId, cancellationToken);
-        }
+            await _redisCache.SetStringAsync(basket.BasketId, JsonSerializer.Serialize(basket), new DistributedCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(30)
+            }, cancellationToken);
 
-        public async Task DeleteBasket(string basketId, CancellationToken cancellationToken)
-        {
-            await _redisCache.RemoveAsync(basketId, cancellationToken);
+            return await GetBasket(basket.BasketId, cancellationToken);
         }
     }
 }

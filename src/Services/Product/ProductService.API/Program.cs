@@ -7,15 +7,13 @@ using ProductService.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers(opt =>
 {
     opt.Filters.Add(new ProducesResponseTypeAttribute(StatusCodes.Status404NotFound));
     opt.Filters.Add(new ProducesResponseTypeAttribute(StatusCodes.Status500InternalServerError));
     opt.Filters.Add(new ProducesResponseTypeAttribute(StatusCodes.Status400BadRequest));
 });
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
@@ -30,7 +28,6 @@ builder.Services
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
